@@ -1,9 +1,0 @@
-{
-    "Version": "1.1",
-    "Data": {
-        "Source": "c:\\users\\rafal\\onedrive\\pulpit\\wordle_project\\wordle_project\\module.ixx",
-        "ProvidedModule": "Module",
-        "ImportedModules": [],
-        "ImportedHeaderUnits": []
-    }
-}
