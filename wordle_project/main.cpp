@@ -3,11 +3,11 @@
 #include <algorithm>
 #include<fstream>
 #include <vector>
-#include "GameLoop.h"
+#include "MenuLoop.h"
 
 int main()
 {
 	srand(time(NULL));
-	GameLoop gl_object;
-	gl_object.MenuLoop();
+	MenuLoop ml_object;
+	ml_object.Loop();
 }

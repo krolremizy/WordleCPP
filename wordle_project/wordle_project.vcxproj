@@ -144,17 +144,19 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Game.cpp" />
-    <ClCompile Include="GameLoop.cpp" />
     <ClCompile Include="GameManager.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="MenuLoop.cpp" />
     <ClCompile Include="Module.ixx" />
+    <ClCompile Include="PostGameLoop.cpp" />
     <ClCompile Include="WordData.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="FileHandler.h" />
     <ClInclude Include="Game.h" />
-    <ClInclude Include="GameLoop.h" />
     <ClInclude Include="GameManager.h" />
+    <ClInclude Include="LoopHandler.h" />
+    <ClInclude Include="MenuLoop.h" />
+    <ClInclude Include="PostGameLoop.h" />
     <ClInclude Include="WordData.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

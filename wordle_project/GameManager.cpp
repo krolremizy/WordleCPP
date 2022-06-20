@@ -3,7 +3,8 @@
 #include <windows.h>
 #include <algorithm>
 #include "GameManager.h"
-#include "GameLoop.h"
+#include "MenuLoop.h"
+#include "PostGameLoop.h"
 
 import Module;
 
@@ -51,7 +52,7 @@ void GameManager::Menu()
 void GameManager::MainGame()
 {
 	system("cls");
-	GameLoop gl_object;
+	PostGameLoop pgl_object;
 	Random random_object;
 	std::string input;
 
@@ -77,7 +78,7 @@ void GameManager::MainGame()
 				std::cout << victory << game_object.reset << std::endl << std::endl;
 				std::cout << "Congratulations! You guessed correctly in " << i+1 << " attempts!" << std::endl;
 				Sleep(3000);
-				gl_object.PostGameLoop();
+				pgl_object.Loop();
 				return;
 			}
 			game_object.CompareWords(input, word_to_guess);
@@ -90,13 +91,13 @@ void GameManager::MainGame()
 	std::cout << "Unfortunately, you didn't guess the word." << std::endl;
 	std::cout << "The correct word was '" << word_to_guess << "'." << std::endl << std::endl;
 	Sleep(3000);
-	gl_object.PostGameLoop();
+	pgl_object.Loop();
 	return;
 }
 
 void GameManager::PostGame()
 {
-	GameLoop gl_object;
+	MenuLoop ml_object;
 	std::string postgame_input;
 	game_loop = true;
 	system("cls");
@@ -110,7 +111,7 @@ void GameManager::PostGame()
 	if (postgame_input == "1")
 	{
 		game_loop = false;	
-		gl_object.MenuLoop();
+		ml_object.Loop();
 	}
 	if (postgame_input == "2")
 	{

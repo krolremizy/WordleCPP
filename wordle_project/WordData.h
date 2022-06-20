@@ -1,9 +1,8 @@
 #pragma once
 #include <string>
 #include <vector>
-#include "FileHandler.h"
 
-class WordData : public FileHandler
+class WordData
 {
 public:
 

@@ -1,12 +1,11 @@
 #pragma once
+#include "LoopHandler.h"
 #include "GameManager.h"
 
-class GameLoop
+class MenuLoop : public LoopHandler
 {
 public:
 
 	GameManager gm_object;
-
-	void MenuLoop();
-	void PostGameLoop();
+	void Loop();
 };
